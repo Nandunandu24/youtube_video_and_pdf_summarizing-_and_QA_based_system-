@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------
+   GLOBAL THEME VARIABLES (LIGHT + DARK)
+---------------------------------------------------- */
+
+:root {
+  --bg: #f9faf9;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --chat-ivory: #FFF8E7;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --chat-ivory: #1B2432;
+}
+
+/* ----------------------------------------------------
+   BASE STYLES
+---------------------------------------------------- */
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* ----------------------------------------------------
+   COMPONENT BACKGROUNDS
+---------------------------------------------------- */
+
+.app-card, .sidebar, .chat-area { background: var(--card); color: var(--text); transition: background 0.3s ease, color 0.3s ease; }
+.chat-ivory { background: var(--chat-ivory) !important; }
+
+/* ----------------------------------------------------
+   FOCUS
+---------------------------------------------------- */
+
+:focus { outline-color: #7ce58d; outline-width: 2px; outline-style: solid; }
+
+/* ----------------------------------------------------
+   DRAG AND DROP
+---------------------------------------------------- */
+
+.drag-active { border-color: #8a2be2 !important; background: rgba(138, 43, 226, 0.1) !important; }
+
+/* ----------------------------------------------------
+   MOBILE FIXES
+---------------------------------------------------- */
+
+@media (max-width: 768px) {
+  aside.w-72 { width: 100% !important; }
+}
+
+/* ----------------------------------------------------
+   TYPING DOTS
+---------------------------------------------------- */
+
+.typing-dots span { animation: blink 1s infinite; margin-right: 2px; opacity: 0.5; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes blink { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+
+/* ----------------------------------------------------
+   TRANSITIONS
+---------------------------------------------------- */
+
+* { transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease; }

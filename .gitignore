@@ -28,3 +28,24 @@ Thumbs.db
 # IDE / Editor settings
 .vscode/
 .idea/
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Build output
+dist/
+build/
+
+# IDE
+.vscode/
