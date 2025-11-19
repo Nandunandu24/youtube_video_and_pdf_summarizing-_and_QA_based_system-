@@ -16,6 +16,7 @@ models/
 *.ipynb_checkpoints/
 
 # Environment files
+
 .env
 .env/
 venv/
@@ -33,6 +34,12 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+
+env/
+.venv/
+venv/
+__pycache__/
+
 
 # Node
 node_modules/
